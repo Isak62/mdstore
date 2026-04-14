@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MDstore - Moda feminina moderna para revelar a sua verdadeira identidade.">
+  <title>MDstore | Revelando a sua Identidade</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+  
+  <!-- Feather Icons -->
+  <script src="https://unpkg.com/feather-icons"></script>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="navbar" id="navbar">
+    <a href="#" class="logo">
+      <i data-feather="hexagon" color="#a855f7"></i> MD<span>store</span>
+    </a>
+    
+    <ul class="nav-links">
+      <li><a href="#">Início</a></li>
+      <li><a href="#products">Nova Coleção</a></li>
+      <li><a href="#">Vestidos</a></li>
+      <li><a href="#">Sobre Nós</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <button aria-label="Pesquisar">
+        <i data-feather="search"></i>
+      </button>
+      <button aria-label="Conta do Usuário">
+        <i data-feather="user"></i>
+      </button>
+      <button aria-label="Carrinho de Compras" id="cart-btn">
+        <i data-feather="shopping-bag"></i>
+        <span class="cart-badge" id="cart-count">0</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-bg">
+      <img src="assets/hero_banner.png" alt="Mulher com roupa moderna e iluminação cyberpunk roxa" loading="lazy">
+    </div>
+    
+    <div class="hero-content">
+      <span class="hero-tag">Coleção Inverno 2026</span>
+      <h1>Reinvente Seu <br>Estilo.</h1>
+      <p>Vista a modernidade, o conforto e a elegância de nossas peças exclusivas. Explore o design de moda que valoriza o seu corpo com ousadia.</p>
+      
+      <div style="display: flex; gap: 1rem;">
+        <button class="btn-primary" onclick="document.getElementById('products').scrollIntoView({behavior: 'smooth'})">
+          Comprar Agora <i data-feather="arrow-right"></i>
+        </button>
+        <button class="btn-outline">
+          Explorar Lookbook
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section class="products-section" id="products">
+    <div class="section-header">
+      <h2>Lançamentos de Outono</h2>
+      <p>Peças com design inovador, modelagem premium e atitude.</p>
+    </div>
+
+    <div class="products-grid">
+      <!-- Product 1 -->
+      <article class="product-card">
+        <div class="product-image">
+          <img src="assets/purple_dress.png" alt="Vestido Elegante Roxo Neox" loading="lazy">
+          <div class="overlay-actions">
+            <button class="btn-primary add-to-cart-btn" data-product="Vestido Neox Elegance">
+              <i data-feather="shopping-cart"></i> Adicionar
+            </button>
+          </div>
+        </div>
+        <div class="product-info">
+          <span class="product-category">Vestidos Premium</span>
+          <h3 class="product-title">Vestido Neox Elegance</h3>
+          <p class="product-price">R$ 549,90</p>
+          <div class="sizes">
+            <button class="size-btn">P</button>
+            <button class="size-btn active">M</button>
+            <button class="size-btn">G</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Product 2 -->
+      <article class="product-card">
+        <div class="product-image">
+          <img src="assets/purple_jacket.png" alt="Jaqueta Leather Violet" loading="lazy">
+          <div class="overlay-actions">
+            <button class="btn-primary add-to-cart-btn" data-product="Jaqueta Leather Violet">
+              <i data-feather="shopping-cart"></i> Adicionar
+            </button>
+          </div>
+        </div>
+        <div class="product-info">
+          <span class="product-category">Outerwear</span>
+          <h3 class="product-title">Jaqueta Leather Violet</h3>
+          <p class="product-price">R$ 899,00</p>
+          <div class="sizes">
+            <button class="size-btn">PP</button>
+            <button class="size-btn">P</button>
+            <button class="size-btn active">M</button>
+          </div>
+        </div>
+      </article>
+      
+      <!-- Placeholder Product 3 para completar grid (Reusando hero mas focado) -->
+      <article class="product-card">
+        <div class="product-image">
+          <img src="assets/hero_banner.png" style="object-position: top; object-fit: cover;" alt="Conjunto Cyber Night" loading="lazy">
+          <div class="overlay-actions">
+            <button class="btn-primary add-to-cart-btn" data-product="Conjunto Nightfall">
+              <i data-feather="shopping-cart"></i> Adicionar
+            </button>
+          </div>
+        </div>
+        <div class="product-info">
+          <span class="product-category">Conjuntos</span>
+          <h3 class="product-title">Conjunto Nightfall</h3>
+          <p class="product-price">R$ 620,00</p>
+          <div class="sizes">
+            <button class="size-btn active">P</button>
+            <button class="size-btn">M</button>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-col brand">
+        <h3>MDstore</h3>
+        <p>Elevando a moda feminina moderna a um novo patamar, combinando inovação, conforto e um visual cibernético luxuoso.</p>
+        <div class="socials">
+          <a href="#" aria-label="Instagram"><i data-feather="instagram"></i></a>
+          <a href="#" aria-label="Twitter"><i data-feather="twitter"></i></a>
+          <a href="#" aria-label="Facebook"><i data-feather="facebook"></i></a>
+        </div>
+      </div>
+      
+      <div class="footer-col">
+        <h3>Links Úteis</h3>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.8rem;">
+          <li><a href="#" style="color: var(--text-muted); text-decoration: none;">Política de Trocas</a></li>
+          <li><a href="#" style="color: var(--text-muted); text-decoration: none;">Frete e Entregas</a></li>
+          <li><a href="#" style="color: var(--text-muted); text-decoration: none;">FAQs</a></li>
+          <li><a href="#" style="color: var(--text-muted); text-decoration: none;">Contato</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Assine a Newsletter</h3>
+        <p>Receba ofertas antecipadas e 10% OFF na sua primeira compra.</p>
+        <form class="subscribe-form" onsubmit="event.preventDefault(); alert('Inscrito com sucesso!');">
+          <input type="email" placeholder="seu@email.com" required>
+          <button type="submit">Assinar</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 MDstore. Todos os direitos reservados. Desenhado para empoderar.</p>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container"></div>
+
+  <!-- Main Interactivity -->
+  <script src="script.js"></script>
+</body>
+</html>
